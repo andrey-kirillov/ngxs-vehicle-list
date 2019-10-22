@@ -15,8 +15,6 @@ import { TanksComponent } from './tanks/tanks.component';
 
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

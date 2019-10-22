@@ -1,4 +1,6 @@
-import {State} from '@ngxs/store';
+import {Action, State} from '@ngxs/store';
+
+import {AddTank} from '../action/tank.action';
 
 
 @State<any>({
@@ -8,6 +10,11 @@ import {State} from '@ngxs/store';
   }
 })
 export class TanksTate {
-
+  @Action(AddTank)
+  addTank(ctx, action) {
+    const tanks = ctx.getState().tanks;
+    tanks.push(action.payload);
+    ctx.patchState({tanks});
+  }
 }
 

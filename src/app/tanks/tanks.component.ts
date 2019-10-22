@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 
+import {AddTank} from '../action/tank.action';
+
 import {Select, Store} from '@ngxs/store';
 import {Observable} from 'rxjs';
+
 
 @Component({
   selector: 'app-tanks',
@@ -14,4 +17,7 @@ export class TanksComponent  {
 
   constructor(private store: Store) { }
 
+  public addTank(tankModel: string, tankYear: string): void {
+    this.store.dispatch(new AddTank({model: tankModel, year: tankYear}));
+  }
 }

@@ -1,1 +1,7 @@
+<input #tankModel placeholder="Tank model"/>
+<input class="ml-1" #tankYear placeholder="Tank year"/>
+
+<button class="ml-1" (click)="addTank(tankModel.value, tankYear.value)">Add Tank</button>
+
+
 <pre>{{tanksList$ | async | json}}</pre>

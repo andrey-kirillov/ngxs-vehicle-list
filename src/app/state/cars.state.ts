@@ -1,4 +1,5 @@
-import {State} from '@ngxs/store';
+import {Action, State} from '@ngxs/store';
+import {AddCar} from '../action/car.action';
 
 
 @State<any>({
@@ -8,5 +9,12 @@ import {State} from '@ngxs/store';
   }
 })
 export class CarsTate {
+
+  @Action(AddCar)
+  addCar(ctx, action) {
+    const cars = ctx.getState().cars;
+    cars.push(action.payload);
+    ctx.patchState({cars});
+  }
 
 }
