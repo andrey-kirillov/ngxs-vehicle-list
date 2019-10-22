@@ -1,8 +1,6 @@
 <input #carModel placeholder="Car model"/>
 <input class="ml-1" #carYear placeholder="Car year"/>
 
-<button class="ml-1" (click)="addCar(carModel.value, carYear.value)">Add Car</button>
-
-
+<button class="ml-1" (click)="addCar(carModel.value.trim(), carYear.value.trim())">Add Car</button>
 
 <pre>{{carsList$ | async | json}}</pre>

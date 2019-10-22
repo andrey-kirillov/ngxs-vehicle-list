@@ -15,7 +15,6 @@ export class AppComponent {
 
   public  routes: IRoute[] = [
     {url: '/cars', name: 'Cars section'},
-    {url: '/tanks', name: 'Tanks section'},
   ];
 
 }

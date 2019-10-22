@@ -17,6 +17,8 @@ export class CarsComponent  {
   constructor(private store: Store) { }
 
   public addCar(carModel: string, carYear: string): void {
-    this.store.dispatch(new AddCar({model: carModel, year: carYear}));
+    if (carModel  && carYear) {
+       this.store.dispatch(new AddCar({model: carModel, year: carYear}));
+    }
   }
 }

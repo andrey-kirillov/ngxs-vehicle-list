@@ -1,4 +1,5 @@
 import {Action, State} from '@ngxs/store';
+
 import {AddCar} from '../action/car.action';
 
 
@@ -8,7 +9,7 @@ import {AddCar} from '../action/car.action';
     cars: [ { model: 'BMW', year: '2005'}]
   }
 })
-export class CarsTate {
+export class CarState {
 
   @Action(AddCar)
   addCar(ctx, action) {
